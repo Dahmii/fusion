@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Fusion Holdings</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #1a365d;
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      nav {
+        background-color: #f0f0f0;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        width: 90px;
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #1a365d;
+      }
+
+      .active {
+        color: #1a365d !important;
+        font-weight: bold !important;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: #1a365d;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .page-title {
+        padding: 2rem 0;
+        text-align: center;
+      }
+
+      .about-section {
+        background: white;
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      @media (max-width: 768px) {
+        .about-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .about-image {
+        border-radius: 8px;
+        overflow: hidden;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .about-text p {
+        margin-bottom: 1.5rem;
+      }
+
+      .values-section {
+        background: white;
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .value-card {
+        text-align: center;
+        padding: 2rem;
+        border-radius: 8px;
+        background: #f9f9f9;
+        transition: transform 0.3s;
+      }
+
+      .value-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .value-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #1a365d;
+      }
+
+      .team-section {
+        background: white;
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 1024px) {
+        .team-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .team-member {
+        text-align: center;
+      }
+
+      .member-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .member-name {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #1a365d;
+      }
+
+      .member-role {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        background-color: #1a365d;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-container">
+        <img
+          href="#"
+          src="/assets/img/fusion-logo.png"
+          alt="fusion-logo"
+          class="logo"
+        />
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About Us</a>
+          <!-- <a href="contact.html">Contact</a>
+          <a href="careers.html">Careers</a>
+          <a href="investors.html">Investors</a> -->
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container">
+        <h1>Fusion Holdings</h1>
+        <p>Diverse Solutions, Shared Excellence</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-title">
+        <h2>About Fusion Holdings</h2>
+        <p>Building Tomorrow's Solutions Today</p>
+      </div>
+
+      <section class="about-section">
+        <div class="about-content">
+          <div
+            class="about-image"
+            style="background-image: url('/api/placeholder/600/400')"
+          ></div>
+          <div class="about-text">
+            <h3>Our Story</h3>
+            <p>
+              Established in 2005, Fusion Holdings began as a small logistics
+              company with a vision to revolutionize global supply chains. Over
+              the past two decades, we've expanded our expertise across multiple
+              industries, building a diverse portfolio of businesses united by
+              our commitment to excellence and innovation.
+            </p>
+
+            <p>
+              Today, Fusion Holdings stands as a testament to strategic growth
+              and adaptability. Our four key divisions—Ashford Logistics, PAL,
+              Ashford Energy, and Ashford Ventures—represent our dedication to
+              meeting the evolving needs of our global clientele while
+              pioneering solutions for tomorrow's challenges.
+            </p>
+
+            <p>
+              With operations in over 30 countries and a team of more than 5,000
+              professionals worldwide, we combine global reach with local
+              expertise to deliver exceptional value to our customers, partners,
+              and communities.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="values-section">
+        <h3>Our Core Values</h3>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">⭐</div>
+            <h4>Excellence</h4>
+            <p>
+              We pursue excellence in everything we do, striving to exceed
+              expectations and deliver outstanding results for our stakeholders.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">🌿</div>
+            <h4>Sustainability</h4>
+            <p>
+              We are committed to sustainable practices that protect our
+              environment and create long-term value for future generations.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">🔄</div>
+            <h4>Innovation</h4>
+            <p>
+              We embrace change and continuously seek innovative solutions to
+              complex challenges in our rapidly evolving world.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <h3>Leadership Team</h3>
+        <div class="team-grid">
+          <div class="team-member">
+            <div
+              class="member-image"
+              style="background-image: url('/api/placeholder/300/300')"
+            ></div>
+            <h4 class="member-name">Ebuka Ogbu</h4>
+            <p class="member-role">Director</p>
+            <!-- <p>Leading Ashford Group's global strategy since 2018.</p> -->
+          </div>
+
+          <div class="team-member">
+            <div
+              class="member-image"
+              style="background-image: url('/api/placeholder/300/300')"
+            ></div>
+            <h4 class="member-name">Michael Chen</h4>
+            <p class="member-role">Chief Financial Officer</p>
+            <!-- <p>Overseeing financial operations and strategic investments.</p> -->
+          </div>
+
+          <div class="team-member">
+            <div
+              class="member-image"
+              style="background-image: url('/api/placeholder/300/300')"
+            ></div>
+            <h4 class="member-name">Olivia Martinez</h4>
+            <p class="member-role">President, Ashford Logistics</p>
+            <!-- <p>Driving innovation in global supply chain solutions.</p> -->
+          </div>
+
+          <div class="team-member">
+            <div
+              class="member-image"
+              style="background-image: url('/api/placeholder/300/300')"
+            ></div>
+            <h4 class="member-name">James Wilson</h4>
+            <p class="member-role">President, Ashford Energy</p>
+            <!-- <p>Leading our sustainable energy initiatives worldwide.</p> -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Ashford Group. All rights reserved.</p>
+        <a
+          href="mailto:info@fusion-holdings.com"
+          style="cursor: pointer; color: #fff"
+        >
+          info@fusion-holdings.com
+        </a>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <!-- <a href="contact.html">Contact</a>
+          <a href="careers.html">Careers</a>
+          <a href="investors.html">Investors</a> -->
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

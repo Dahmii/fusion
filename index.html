@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fusion Holdings - Business Divisions</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-container">
+        <img
+          href="#"
+          src="/assets/img/fusion-logo.png"
+          alt="fusion-logo"
+          class="logo"
+        />
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About Us</a>
+          <!-- <a href="contact.html">Contact</a>
+          <a href="careers.html">Careers</a>
+          <a href="investors.html">Investors</a> -->
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="container">
+        <h1>Fusion Holdings</h1>
+        <p class="tagline">Diverse Solutions, Shared Excellence</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="business-grid">
+        <!-- Ashford Logistics -->
+        <div class="business-card" data-url="https://ashfordlogistics.com/">
+          <div
+            class="card-img"
+            style="background-image: url('./assets/img/ashford.jpg')"
+          ></div>
+          <div class="card-content">
+            <h2 class="card-title">Ashford Logistics</h2>
+            <p class="card-desc">
+              Ashford Logistics is a global logistics company that provides a
+              wide range of services, including freight forwarding, warehousing,
+              and transportation. We specialize in delivering exceptional
+              services, ensuring your goods reach their destination swiftly and
+              securely.
+            </p>
+            <a
+              href="https://ashfordlogistics.com/"
+              class="card-link"
+              target="_blank"
+              onclick="event.stopPropagation();"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <!-- PAL -->
+        <div class="business-card" data-url="https://pal-aviation.com">
+          <div
+            class="card-img"
+            style="background-image: url('/assets/img/pala.JPG')"
+          ></div>
+          <div class="card-content">
+            <h2 class="card-title">Pal Aviation</h2>
+            <p class="card-desc">
+              Pal Aviation is a premier private jet hire and maintenance company
+              dedicated to providing a seamless and luxurious travel experience
+            </p>
+            <a
+              href="https://pal-aviation.com"
+              class="card-link"
+              target="_blank"
+              onclick="event.stopPropagation();"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <!-- Ashford Energy -->
+        <div class="business-card" data-url="ashford-energy.html">
+          <div
+            class="card-img"
+            style="background-image: url('/assets/img/ashfordenergy.jpg')"
+          ></div>
+          <div class="card-content">
+            <h2 class="card-title">Ashford Energy</h2>
+            <p class="card-desc">
+              Sustainable energy solutions for a greener future. We're leading
+              the transition to renewable resources while meeting global energy
+              demands.
+            </p>
+            <a
+              href="ashford-energy.html"
+              class="card-link"
+              target="_blank"
+              onclick="event.stopPropagation();"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <!-- Wilcrest -->
+        <div class="business-card" data-url="https://wilcrestco.com">
+          <div
+            class="card-img"
+            style="background-image: url('/assets/img/wilcrest.jpg')"
+          ></div>
+          <div class="card-content">
+            <h2 class="card-title">WilcrestCo</h2>
+            <p class="card-desc">
+              Wilcrest Construction and Logistics is a dynamic and innovative
+              company specializing in global import and export services, marine
+              logistics, sea freight, and air freight solutions.
+            </p>
+            <a
+              href="https://wilcrestco.com"
+              class="card-link"
+              target="_blank"
+              onclick="event.stopPropagation();"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Ashford Group. All rights reserved.</p>
+        <a
+          href="mailto:info@fusion-holdings.com"
+          style="cursor: pointer; color: #fff"
+        >
+          info@fusion-holdings.com
+        </a>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <!-- <a href="contact.html">Contact</a>
+          <a href="careers.html">Careers</a>
+          <a href="investors.html">Investors</a> -->
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Make the entire card clickable
+      document.querySelectorAll(".business-card").forEach((card) => {
+        card.addEventListener("click", function () {
+          const link = this.getAttribute("data-url");
+          window.open(link, "_blank"); // Opens the URL in a new tab
+        });
+      });
+    </script>
+  </body>
+</html>
